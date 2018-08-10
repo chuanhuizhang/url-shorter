@@ -16,7 +16,7 @@ A simple public service to generate short url based on give url.
     docker-compose up
   ```
 
-#### Database Seeding
+#### Database Seeding in local
   Run the following command line to seed the database, remeber to replace with your own credentials
   ```
     ./seeds/seed localhost:27017 url-shorter urls ./urls.json your_admin_username your_admin_password
