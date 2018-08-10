@@ -1,0 +1,26 @@
+version: '2'
+services:
+  mongodb:
+    image: mongo
+    container_name: url-shorter_mongo
+    volumes:
+      - ./tmp/data:/data/db
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: 'your_admin_username'
+      MONGO_INITDB_ROOT_PASSWORD: 'your_admin_password'
+  url-shorter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    container_name: url-shorter_node
+    ports:
+      - "3000:3000"
+    links:
+      - mongodb
+    environment:
+      NODE_ENV: local
+      DB_URI: 'mongodb://your_admin_username:your_admin_password@url-shorter_mongo:27017/url-shorter?authSource=admin'
