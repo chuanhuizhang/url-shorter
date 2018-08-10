@@ -1,6 +1,7 @@
 # URL Shorter
 
 A simple public service to generate short url based on give url.
+You can find the alive example here: https://cz-url-shorter.herokuapp.com/
 
 ## Development
 
