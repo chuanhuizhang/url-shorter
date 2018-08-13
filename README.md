@@ -17,7 +17,7 @@ You can find the alive example here: https://cz-url-shorter.herokuapp.com/
     docker-compose up
   ```
 
-#### Database Seeding in local
+#### Database Seeding in Local
   Run the following command line to seed the database, remeber to replace with your own credentials
   ```
     ./seeds/seed localhost:27017 url-shorter urls ./urls.json your_admin_username your_admin_password
@@ -27,3 +27,4 @@ You can find the alive example here: https://cz-url-shorter.herokuapp.com/
 
 * *1. Protect the api with auth*
 * *2. test setup*
+* *3. duplicate short id check before save it*
