@@ -23,6 +23,7 @@ function handler(request, h) {
       if (!url) {
         return reject(Boom.notFound('URL not found'))
       }
+      // TODO: as a API, it should redirect, it should reply with long, and rely on FE or specific endpoint to render.
       resolve(h.redirect(url.longURL))
     })
   })
